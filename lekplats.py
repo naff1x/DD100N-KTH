@@ -15,5 +15,12 @@ class BasicClass():
     def testFunction(self):
         print("You made it!")
 
-bC = BasicClass()
-bC.testFunction()
+#bC = BasicClass()
+#bC.testFunction()
+
+from tkinter import *
+
+rot = Tk()
+textruta = Label(rot, text= "Hej Tkinter!")
+textruta.pack()
+rot.mainloop()
