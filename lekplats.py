@@ -30,13 +30,34 @@ class BasicClass():
         for input in inputList:
             print(input)
     
+        cityList = []
+        cityList.append("Stockholm")
+        cityList.append("London")
+        cityList.append("New York")
+
+        for city in cityList:
+            print(city)
+
     def inputFunction(self):
         whatever = input(str("Skriv vad som helst här: "))
         print(whatever)
         siffra = float(input("Valfri siffra här: "))
         print(siffra)
+    def dictionaryFuntion(self):
+        ageDict = {"Linus":16, "Alex":17, "Albert":"too damn old"}
+        query = input(str("I sure hope you're not a pedofile or anything, who are you thinking about?: "))
+        print(str(query) + " is " + str(ageDict[query]))
+        nameToDel = input(str("Who do you want to delete from the database?: "))
+        del ageDict[nameToDel]
+        print(ageDict)
+        input("Almost done")
+        print(ageDict.keys())
+
+        for key in ageDict.keys():
+            print(str(key) + " ger värdet: " + str(ageDict[key]))
 
 Bc = BasicClass()
 #Bc.testFunction()
 #Bc.listFunction()
 #Bc.inputFunction()
+Bc.dictionaryFuntion()
