@@ -15,11 +15,10 @@ class BasicClass():
         matris.append(sorteradLista)
         print(matris[0][4])
     
-        #inputList = 3*[None]
-        inputList = []
+        inputList = 3*[None]
         for i in range(3):
-            #inputList[i] = input("("+ str(i) + ")" + " Write whatever in here: ")
-            inputList.append(input("("+ str(i) + ")" + " Write whatever in here: "))
+            inputList[i] = input(str("Enter input: "))
+
         print(inputList)
         del inputList[2]
         print(inputList)
@@ -27,8 +26,8 @@ class BasicClass():
         print(inputList)
         for a in range(len(inputList)):
             print("Det finns " + str(a+1) + " värden i listan!")
-        for input in inputList:
-            print(input)
+        for value in inputList:
+            print(value)
     
         cityList = []
         cityList.append("Stockholm")
@@ -58,6 +57,6 @@ class BasicClass():
 
 Bc = BasicClass()
 #Bc.testFunction()
-#Bc.listFunction()
+Bc.listFunction()
 #Bc.inputFunction()
-Bc.dictionaryFuntion()
+#Bc.dictionaryFuntion()
