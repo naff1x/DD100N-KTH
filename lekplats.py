@@ -54,9 +54,29 @@ class BasicClass():
 
         for key in ageDict.keys():
             print(str(key) + " ger värdet: " + str(ageDict[key]))
+    def bigDictFunction(self):
+        databas = {}
+        nycklar = []
+        värden = []
+        siffror = [1,2,3]
+        översattEtt = ["ett","one","uno"]
+        översattTvå = ["två","two","dos"]
+        översattTre = ["tre","three","tres"]
 
+        for i in range(len(siffror)):
+            nycklar.append(siffror[i])
+        
+        värden.append(översattEtt)
+        värden.append(översattTvå)
+        värden.append(översattTre)
+
+        for i in range(3):
+            databas[nycklar[i]] = värden[i]
+
+        print(databas)
 Bc = BasicClass()
 #Bc.testFunction()
-Bc.listFunction()
+#Bc.listFunction()
 #Bc.inputFunction()
 #Bc.dictionaryFuntion()
+#Bc.bigDictFunction()
