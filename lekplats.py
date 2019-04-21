@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 print("Program booted, beep boop!")
 
-
 class BasicClass():
     def testFunction(self):
         print("You made it!")
@@ -76,9 +75,12 @@ class BasicClass():
             databas[nycklar[i]] = värden[i]
 
         print(databas)
+    def parameterFunction(self, message = "Null?", number = 16):
+        print(message, number)
 Bc = BasicClass()
 #Bc.testFunction()
 #Bc.listFunction()
 #Bc.inputFunction()
 #Bc.dictionaryFuntion()
 #Bc.bigDictFunction()
+#Bc.parameterFunction()
