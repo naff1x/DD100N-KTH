@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 print("Program booted, beep boop!")
 
+from random import randint
+
 class BasicClass():
+
     def testFunction(self):
         print("You made it!")
     def listFunction(self):
@@ -77,6 +80,21 @@ class BasicClass():
         print(databas)
     def parameterFunction(self, message = "Null?", number = 16):
         print(message, number)
+    def randomFunction(self):
+        import random
+
+        slumpTal = random.randint(1,9)
+        print("Du kastar en tärning...", end=" ")
+        print("och får " + str(slumpTal) + "!")
+    def mathFunction(self):
+        import math
+
+        bas = int(input("Ange bastal: "))
+        exponent = int(input("Ange exponent: "))
+        print("Svaret blir: " + str(math.pow(bas,exponent)))
+    def moduleTestFunction(self):
+        testInt = randint(0,9) # funktionen 'randint' kan kallas utan 'random'
+        print(testInt)         # eller lokal import tack vare en tidigare import
 Bc = BasicClass()
 #Bc.testFunction()
 #Bc.listFunction()
@@ -84,3 +102,6 @@ Bc = BasicClass()
 #Bc.dictionaryFuntion()
 #Bc.bigDictFunction()
 #Bc.parameterFunction()
+#Bc.randomFunction()
+#Bc.mathFunction()
+Bc.moduleTestFunction()
