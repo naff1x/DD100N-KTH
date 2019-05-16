@@ -95,6 +95,15 @@ class BasicClass():
     def moduleTestFunction(self):
         testInt = randint(0,9) # funktionen 'randint' kan kallas utan 'random'
         print(testInt)         # eller lokal import tack vare en tidigare import
+    def fileReader(self):
+        fileMessage = []
+        textFile = open("text.txt", "r")
+        #textFile = open("text.txt", "r", encoding="utf-8")
+        for line in textFile:
+            fileMessage.append(line)
+        textFile.close()
+        print(fileMessage)
+
 Bc = BasicClass()
 #Bc.testFunction()
 #Bc.listFunction()
@@ -104,4 +113,5 @@ Bc = BasicClass()
 #Bc.parameterFunction()
 #Bc.randomFunction()
 #Bc.mathFunction()
-Bc.moduleTestFunction()
+#Bc.moduleTestFunction()
+Bc.fileReader()
