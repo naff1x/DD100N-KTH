@@ -95,15 +95,24 @@ class BasicClass():
     def moduleTestFunction(self):
         testInt = randint(0,9) # funktionen 'randint' kan kallas utan 'random'
         print(testInt)         # eller lokal import tack vare en tidigare import
-    def fileReader(self):
+    def fileReader(self, flag=0):
         fileMessage = []
-        textFile = open("text.txt", "r")
-        #textFile = open("text.txt", "r", encoding="utf-8")
-        for line in textFile:
-            fileMessage.append(line)
-        textFile.close()
+        if flag is 0:
+            textFile = open("text.txt", "r")
+            #textFile = open("text.txt", "r", encoding="utf-8")
+            for line in textFile:
+                fileMessage.append(line)
+            textFile.close()
+            print("flag was 0")
+        else:
+            with open("readText.txt", "r", encoding="utf-8") as file:
+                for rad in file:
+                    fileMessage.append(rad)
+            print("flag was 1")
         print(fileMessage)
-
+    def fileWriter(self):
+        with open("writtenFile.txt", "w", encoding="utf-8") as skrivFil:
+            skrivFil.write("Rad ett\nRad två\nRad tre")
 Bc = BasicClass()
 #Bc.testFunction()
 #Bc.listFunction()
@@ -114,4 +123,5 @@ Bc = BasicClass()
 #Bc.randomFunction()
 #Bc.mathFunction()
 #Bc.moduleTestFunction()
-Bc.fileReader()
+#Bc.fileReader(0)
+Bc.fileWriter()
