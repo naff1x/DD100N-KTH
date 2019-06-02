@@ -111,8 +111,10 @@ class BasicClass():
             print("flag was 1")
         print(fileMessage)
     def fileWriter(self):
-        with open("writtenFile.txt", "w", encoding="utf-8") as skrivFil:
-            skrivFil.write("Rad ett\nRad två\nRad tre")
+        with open("writtenFile.txt", "a", encoding="utf-8") as skrivFil:
+            #inputMessage = input()
+            #skrivFil.write("Rad ett\nRad två\nRad tre")
+            skrivFil.write("\n" + str(input()))
 Bc = BasicClass()
 #Bc.testFunction()
 #Bc.listFunction()
@@ -125,3 +127,5 @@ Bc = BasicClass()
 #Bc.moduleTestFunction()
 #Bc.fileReader(0)
 Bc.fileWriter()
+
+#say är en synd
